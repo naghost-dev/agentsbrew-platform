@@ -13,7 +13,7 @@
     source:
       repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent
-      targetRevision: "0.7.0"
+      targetRevision: "0.9.4"
       helm:
         values: |
           providers:

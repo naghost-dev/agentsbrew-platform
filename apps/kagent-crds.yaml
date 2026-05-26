@@ -13,7 +13,7 @@
     source:
       repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
-      targetRevision: "0.7.0"
+      targetRevision: "0.9.4"
     destination:
       server: https://kubernetes.default.svc
       namespace: agentsbrew

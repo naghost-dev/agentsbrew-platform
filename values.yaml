@@ -1,0 +1,9 @@
+server:
+  extraArgs:
+    - --insecure
+
+configs:
+  params:
+    server.insecure: true
+  cm:
+    url: "http://localhost:8080"
