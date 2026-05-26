@@ -1,0 +1,25 @@
+# kagent-crds.yaml
+  apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    name: kagent-crds
+    namespace: argocd
+    annotations:
+      argocd.argoproj.io/sync-wave: "1"    # se instala primero
+    finalizers:
+      - resources-finalizer.argocd.argoproj.io
+  spec:
+    project: default
+    source:
+      repoURL: ghcr.io/kagent-dev/kagent/helm
+      chart: kagent-crds
+      targetRevision: "0.7.0"
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: agentsbrew
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+        - CreateNamespace=true
