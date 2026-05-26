@@ -8,7 +8,7 @@
     project: default
     source:
       repoURL: https://github.com/naghost-dev/agentsbrew-platform.git
-      targetRevision: feature/argocd-setup
+      targetRevision: feature/argocd_setup
       path: apps/
     destination:
       server: https://kubernetes.default.svc
